@@ -13,3 +13,32 @@
 .add-range .fa-plus-circle {
   color: var(--color-text);
 }
+
+
+@media only screen and (max-width: 990px) {
+
+  .add-range{
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    width:100%;
+    position: relative;
+    z-index: 1;
+  }
+  .add-range .icon-button{
+    position: absolute;
+    top:0;
+    bottom:0;
+    
+  }
+}
+@media only screen and (max-width: 321px){
+  .add-range .icon-button{  right: 120px;}
+}
+@media only screen and (min-width: 322px) and (max-width: 376px){
+  .add-range .icon-button{  right: 140px;}
+}
+@media only screen and (min-width: 377px) and (max-width: 426px){
+  .add-range .icon-button{  right: 160px;}
+}
+

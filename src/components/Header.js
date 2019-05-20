@@ -17,7 +17,7 @@ export default class Header {
    * @return {HTMLElement}
    */
   getElement() {
-    this._container.className = "header";
+    this._container.id = "header";
 
     const logoContainer = document.createElement("div");
     logoContainer.className = "logo-container";
@@ -33,3 +33,21 @@ export default class Header {
     return this._container;
   }
 }
+
+// When the user scrolls down 50px from the top of the document, resize the header's size
+function resizeHeaderOnScroll() {
+  const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+  shrinkOn = 50,
+  headerEl = document.getElementById("header");
+  
+  if (distanceY > shrinkOn) {
+    headerEl.classList.add("shrink");
+  } else {
+    headerEl.classList.remove("shrink");
+  }
+}
+
+window.addEventListener('scroll', resizeHeaderOnScroll);
+
+
+

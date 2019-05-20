@@ -10,3 +10,15 @@
 .pie-chart-card h4 {
   margin-top: 0;
 }
+@media only screen and (max-width: 990px) {
+.pie-chart-card svg{
+  height:200px;
+  width: 270px;
+  margin:0 auto;
+}
+.pie-chart-card{
+  margin-right: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+}

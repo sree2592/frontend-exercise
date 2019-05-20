@@ -1,5 +1,5 @@
 .range-card {
-  position: relative;
+
 
   height: 320px;
   width: 320px;
@@ -18,4 +18,10 @@
   background: transparent;
   border: none;
   color: inherit;
+}
+
+@media only screen and (max-width: 990px) {
+.range-card{
+  width:100%;
+}
 }

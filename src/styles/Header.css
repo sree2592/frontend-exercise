@@ -1,22 +1,63 @@
-.header {
+#header {
   display: flex;
   flex-direction: row;
   align-items: center;
-
+  position: fixed;
+  width:77.5%;
   background: var(--color-bg);
   padding: 50px 100px;
-
+  transition: 0.2s; 
   box-shadow: 0 3px 3px var(--color-shadow);
+  z-index: 5;
 }
 
-.header .logo-container {
+#header .logo-container {
   height: 134px;
   width: 134px;
   background: url("../assets/logo.png");
-
+  background-repeat: no-repeat;
   margin-right: 32px;
 }
 
-.header h1 {
+#header h1 {
   flex-grow: 1;
+}
+.shrink{
+  padding: 5px 100px;
+}
+
+@media only screen and (max-width: 990px) {
+  #header{
+    display: block;
+    padding: 20px 0 20px 10px;
+    width:100%;
+  }
+  #header .logo-container {
+    display: inline-block;
+    margin-right: 0;
+    background-size: contain;
+    width: 13%;
+    height: 42px;
+  }
+  #header h1 {
+    display: inline-block;
+    font-size: 20px;  
+    margin: 0;
+    display: inline-block;
+  }
+  .export-buttons{
+    float:right;
+    margin-right: 20px;
+  }
+  .export-buttons-title{
+    margin: 0;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .export-buttons-container{
+    font-size: 8px;
+  }
+}
+@media only screen and (min-width: 427px) and (max-width: 770px){
+  #header .logo-container{ width:6%;}
 }

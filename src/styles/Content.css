@@ -1,5 +1,6 @@
 .content {
   padding: 50px 100px;
+  padding-top: 230px;
 }
 
 .content .store-container {
@@ -25,4 +26,21 @@
 
 .content .range-card-container > *:last-child {
   margin-right: 0;
+}
+
+@media only screen and (max-width: 990px) {
+.content{
+  padding-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.content .store-container{
+ display: block;
+}
+.content .range-card-container{
+  display: block;
+}
+.range-card{
+  text-align: center;
+}
 }
